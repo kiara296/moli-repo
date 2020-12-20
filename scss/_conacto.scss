@@ -1,0 +1,25 @@
+/*CONTACTO*/
+.contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 60px;
+}
+
+.tituloConacto {
+    margin: 50px 0px 50px 0px;
+}
+
+.formulario-contacto {
+    width: 30%;
+    div {
+        width: 90%;
+    }
+    legend {
+        text-align: center;
+    }
+}
+
+.info-conacto {
+    align-self: center;
+}

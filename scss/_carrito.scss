@@ -1,0 +1,20 @@
+/*CARRITO*/ 
+.miCarrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: baseline;
+    column-gap: 10px;
+        img {
+            width:50%;
+            height: 20%;
+        }
+}
+
+.form-carrito {
+    padding: 5%;
+}
+
+.titulo-miCarrito {
+    margin: 5% 0% 2% 0%;
+}

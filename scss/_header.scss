@@ -1,0 +1,235 @@
+/*HEADER*/
+/*header grid*/
+.header {
+    display: grid;
+    grid-template-areas: 
+    "alert alert alert"
+    "empty logo buscar"
+    "navbar navbar navbar ";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 90px 50px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    border-bottom-style: inset;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
+
+        @media screen and (max-width: 600px) {
+            display: grid;
+            grid-template-areas: 
+            "alert alert alert"
+            "logo buscar navbar";
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 5vh 10vh;
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
+            height: fit-content;
+        }
+}
+
+
+/* alert navbar */
+
+.alert-primary  {
+    grid-area: alert;
+    padding: 1px;
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+            margin: 0%;
+            margin-right: 1%;
+        }
+        /* divisor lista */
+        li {
+            padding-left: 5vh;
+            margin: 1% 0vh 1% 0vh;
+            border-right: white solid thin;
+            padding-right: 5vh;
+            &:last-child {
+                border-right: none; 
+            }
+        }
+        a {
+            font-size: small;   
+            color: white;
+
+            @media screen and (max-width: 600px) {
+                  font-size: x-small;
+            }
+            
+        }
+}
+
+
+
+ /*ENCABEZADO*/
+    /* centro */
+.header__logo {
+    justify-self: center;
+    align-self: center;
+    grid-area: logo;
+    text-align: center;
+
+    h2 {
+        font-family: 'B612', sans-serif;
+        font-style: italic;
+        font-size: smaller;
+        color: rgb(255, 86, 86);
+
+        @media screen and (max-width: 600px) {
+                font-size: x-small;
+        }
+    }
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+}
+
+
+
+/* encabezado derecha  */
+
+.header__encabezadoDerecha {
+    grid-area: buscar;
+    justify-self: end;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-right: 5%;
+
+    @media screen and (max-width: 600px) {
+            margin-right: 0%;
+    }
+}
+
+
+
+    /* search input */
+.input-group-append, .input-group-prepend {
+    display: block;
+}
+
+.input-group {
+    margin-right: 10%;
+}
+
+.fa-search {
+    color: rgb(160, 176, 204);
+}
+
+.btn-outline-secondary {
+    border-color: rgb(160, 176, 204);
+}
+
+.form-control {
+    border-color: rgb(160, 176, 204);
+}
+
+
+ /*carrito*/
+.header__carrito {
+    display: flex;
+    align-items: center;
+
+    img {
+        width: 30px;
+        height: 30px;
+        border: none;
+
+            &:hover {
+                animation: swing 2s;
+            }
+    }
+}
+
+.header__navbar {
+    grid-area: navbar;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 1em;
+    color: black;
+    margin: 0px;
+
+    @media screen and (max-width: 600px) {
+          padding: 0%;
+    }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: fit-content;
+            list-style: none;
+            padding: 14px 16px;
+            width: 40%;
+            height: 5vh;
+
+            @media screen and (max-width: 600px) {
+                height: fit-content;
+                padding: 0px;
+                width: fit-content;
+            }
+        }
+
+        li  {
+            a {
+                display: flex;
+                justify-content: space-between;
+                padding: .5em 1em;
+
+                @media screen and (max-width: 600px) {
+                    font-size: xx-small;
+                    padding: 0%;
+                }
+            }     
+        }
+
+        a {
+            height: 4vh;
+            font-size: smaller;
+            background-color: white;
+            display: inline-block;
+            position: relative;
+            color: black;
+            padding-bottom: 10px;
+
+                &:after {
+                    background: none repeat scroll 0 0 transparent;
+                    bottom: 0;
+                    content: "";
+                    display: block;
+                    height: 2px;
+                    left: 50%;
+                    position: absolute;
+                    background:cadetblue;
+                    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                    width: 0;
+                }
+                
+                &:hover {
+                text-decoration: none;
+                color: cadetblue;
+
+                    &:after {
+                        width: 100%;
+                        left: 0;
+                    } 
+                }
+        }    
+} 
+
+
+
+
+
+
+
+

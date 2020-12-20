@@ -1,0 +1,505 @@
+/*HEADER*/
+/*header grid*/
+header {
+    display: grid;
+    grid-template-areas: 
+    "alert alert alert"
+    "empty logo buscar"
+    "navbar navbar navbar ";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 90px 50px;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        display: grid;
+        grid-template-areas: 
+        "alert alert alert"
+        "logo buscar navbar";
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 5vh 10vh;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        height: fit-content;
+    }
+  }
+
+header {
+    border-bottom-style: inset;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
+} 
+
+    /*ALERT NAV*/
+.alert {
+    grid-area: alert;
+    padding: 1px;
+}
+
+.alert-primary ul  {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    margin: 0%;
+    margin-right: 1%;
+}
+
+    /* divisor lista */
+.alert-primary li {
+    margin: 1% 0vh 1% 0vh;
+    border-right: white solid thin;
+    padding-right: 5vh;
+    padding-left: 5vh;
+}
+
+.alert-primary li:last-child {  
+    border-right: none; 
+}
+
+.alert-primary a {
+    color: white;
+    font-size: small;
+}
+
+@media screen and (max-width: 600px) {
+    .alert-primary a {
+      font-size: x-small;
+    }
+}
+
+ 
+    /*ENCABEZADO*/
+    /* centro */
+.logo {
+    justify-self: center;
+    align-self: center;
+    grid-area: logo;
+    text-align: center;
+}
+
+.logo h2 {
+    font-family: 'B612', sans-serif;
+    font-style: italic;
+    font-size: smaller;
+    color: rgb(255, 86, 86);
+}
+
+@media screen and (max-width: 600px) {
+    .logo h2 {
+        font-size: x-small;
+    }
+}
+
+    /* h1 */
+h1 {
+    font-family: 'B612', sans-serif;
+    margin: 0%;
+    color: rgb(250, 98, 98);
+    letter-spacing: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    h1 {
+      font-size: smaller;
+    }
+  }
+
+    /* encabezado derecha  */
+
+.encabezadoDerecha {
+    grid-area: buscar;
+    justify-self: end;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-right: 5%;
+}
+
+@media screen and (max-width: 600px) {
+    .encabezadoDerecha {
+     margin-right: 0%;
+    }
+  }
+
+  /* search input */
+.input-group-append, .input-group-prepend {
+    display: block;
+}
+
+.input-group {
+    margin-right: 10%;
+}
+
+.fa-search {
+    color: rgb(160, 176, 204);
+}
+
+.btn-outline-secondary {
+    border-color: rgb(160, 176, 204);
+}
+
+.form-control {
+    border-color: rgb(160, 176, 204);
+}
+    /*carrito*/
+.carrito {
+    display: flex;
+    align-items: center;
+}
+.carrito img {
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+/*animacion mover carrito*/
+.carrito img:hover{
+    animation: swing 2s;
+}
+
+
+        /*NAVBAR*/
+.navbar {
+    grid-area: navbar;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 1em;
+    color: black;
+    margin: 0px;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar  {
+      padding: 0%;
+    }
+  }
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    list-style: none;
+    padding: 14px 16px;
+    width: 40%;
+    height: 5vh;
+}
+
+.navbar li a {
+    display: flex;
+    justify-content: space-between;
+    padding: .5em 1em;
+}
+
+@media screen and (max-width: 600px) {
+    .navbar ul {
+      height: fit-content;
+      padding: 0px;
+      width: fit-content;
+    }
+  }
+
+@media screen and (max-width: 600px) {
+    .navbar li a {
+      font-size: xx-small;
+      padding: 0%;
+    }
+  }
+
+
+
+    /*Subrayado navbar*/
+.navbar a {
+    height: 4vh;
+    font-size: smaller;
+    background-color: white;
+    display: inline-block;
+    position: relative;
+    color: black;
+    padding-bottom: 10px;
+}
+.navbar a:hover {
+    text-decoration: none;
+  }
+
+ .navbar a:hover {
+    color: cadetblue;
+}
+.navbar a:after {
+    background: none repeat scroll 0 0 transparent;
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 50%;
+	position: absolute;
+	background:cadetblue;
+	transition: width 0.3s ease 0s, left 0.3s ease 0s;
+	width: 0;
+}
+.navbar a:hover:after {
+	width: 100%;
+    left: 0;
+} 
+
+/*FOOTER*/
+.seguinos {
+    background-color: #c0dcfa;
+    border-color: #b8daff;
+    margin-top: 5%;
+} 
+
+footer {
+    background-color: rgb(236, 232, 232);
+}
+
+footer hr {
+    width: 60px; 
+    background-color: cornflowerblue;
+}
+.footer-copyright {
+    background-color:rgb(212, 209, 209);
+    font-size: small;
+}
+
+
+
+    /*GENERALES*/
+
+    /*TITULOS SECUNDARIOS*/
+h2 {
+    color: black;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: "Alata", sans-serif;
+    margin: 0px;
+}
+h3 {
+    color: black;
+    font-family: "Monserrat Alterantes", sans-serif;
+    font-weight: lighter;
+    letter-spacing: 2px ;
+    text-align: center;
+    margin-bottom: 5%;
+}
+h4 {
+    color: black;
+    font-family: "Monserrat Alterantes", sans-serif;
+    letter-spacing: 2px;
+}
+p {
+    color: black;
+    font-family: "Monserrat Alterantes", sans-serif;
+    letter-spacing: 1px;
+}
+ 
+        /*imagenes*/
+img {
+    width: 29.5% ;
+    height: 380px;
+}
+        /*links*/
+a {
+    text-decoration: none;
+    color: black;
+    font-family: "Monserrat Alterantes", sans-serif;
+    letter-spacing: 1px;
+}
+
+
+/*INDEX*/
+
+    /*MENU PPAL*/
+
+.menuppal {
+    grid-area: menuppal;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2vh 0vh 2vh 0vh;
+}
+
+/*hover negrita para menu*/
+.menuppal a {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.menuppal a:hover {
+  font-weight: bold;
+}
+
+/*hover shadow para contenedores menu*/
+.menuppal div {
+    width: 396px;
+    height: 57.41px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow:none ;
+}
+
+@media screen and (max-width: 600px) {
+    .menuppal div {
+      width: 396px;
+      display: flex;
+      flex-direction: row;
+      overflow: scroll;
+    }
+  }
+
+.menuppal div:hover {
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+}
+
+/* color contenedores menuppal */
+#pastasTartas {
+    background-color: rgb(122, 161, 235);
+    border: rgb(140, 169, 170);
+}
+#vegetales {
+    background-color: rgb(124, 168, 170);
+    border: rgb(137, 182, 161);
+}
+#Panadería  {
+    background-color: rgb(190, 250, 230);
+    border: rgb(140, 169, 170);
+}
+
+  /*imagenes productos ppal*/
+.productosPpal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+    /*Productos destacados*/
+
+.productosDestacados {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: rgb(241, 238, 238);
+    padding: 6% 0% 6% 0%;
+}
+
+.productosDestacados article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+    gap: 10px;
+
+} 
+
+    /* CARDS PRODUCTOS  */
+.card {
+    min-width: fit-content;
+    height: fit-content;
+    box-shadow: 5px 5px 5px rgb(161, 161, 161);
+
+} 
+.card:hover {
+    box-shadow: 5px 5px 5px rgb(124, 124, 124);
+}
+.productosDestacados img {
+    width: 280px;
+    height: 250px;
+    margin-bottom: 0px;
+}
+
+
+
+
+        /*boton agregar carrito*/
+
+.btn-primary {
+    background-color: #b9dbff;
+    border-color: #b8daff;
+}
+
+.btn-primary svg:hover {
+    animation: swing 2s;
+}
+
+
+
+/*FORMULARIOS*/
+
+form h3 {
+    color: cornflowerblue;
+    margin-top: 0%;
+    font-weight: bold;
+    font-size: smaller;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(225, 229, 230);
+    font-family: "Monserrat Alterantes", sans-serif;
+    font-weight: lighter;
+    padding: 5%;
+    margin-top: 6%;
+    border: grey;
+    border-radius: 10px;
+    border-width: thin;
+}
+
+
+    /*CREAR CUENTA*/
+
+.crearCuenta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.crearCuenta h2 {
+    margin-bottom: 2%;
+}
+
+
+/*Lista OL*/
+ol {
+    list-style-type: upper-roman;
+}
+
+/*CONTACTO*/
+.contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 60px;
+}
+
+.tituloConacto {
+    margin: 50px 0px 50px 0px;
+}
+
+/*CARRITO*/ 
+.miCarrito {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: baseline;
+    column-gap: 10px;
+}
+
+.miCarrito img {
+    width:50%;
+    height: 20%;
+}
+
+

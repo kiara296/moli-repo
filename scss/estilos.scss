@@ -1,0 +1,138 @@
+$colorTurquesa:#c0dcfa;
+$colorGrisFondo:rgb(241, 238, 238);
+$fontSecundaria:'Montserrat', sans-serif;
+$fontPrincipal:'B612', sans-serif;
+@import "header";
+@import "footer"; 
+@import "index";
+@import "crearCuenta";
+@import "conacto";
+@import "carrito";
+
+/*GENERALES*/
+
+/* H1 */
+h1 {
+    font-family: 'B612', sans-serif;
+    margin: 0%;
+    color: rgb(250, 98, 98);
+    letter-spacing: 5px;
+
+        @media screen and (max-width: 600px) {
+                font-size: smaller;
+            }
+}
+
+/*TITULOS SECUNDARIOS*/
+h2 {
+    color: black;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: "Alata", sans-serif;
+    margin: 0px 0px 1% 0px;
+}
+
+h3 {
+    color: black;
+    font-family: "Monserrat Alterantes", sans-serif;
+    font-weight: lighter;
+    letter-spacing: 2px ;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+h4 {
+    color: black;
+    font-family: "Monserrat Alterantes", sans-serif;
+    letter-spacing: 2px;
+}
+
+p {
+    color: black;
+    font-family: "Monserrat Alterantes", sans-serif;
+    letter-spacing: 1px;
+}
+    
+        /*imagenes*/
+img {
+    width: 29.5% ;
+    height: 380px;
+}
+        /*links*/
+a {
+    text-decoration: none;
+    color: black;
+    font-family: "Monserrat Alterantes", sans-serif;
+    letter-spacing: 1px;
+}
+
+/*Lista OL*/
+ol {
+    list-style-type: upper-roman;
+}
+
+/*FORMULARIOS*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgb(225, 229, 230);
+    font-family: "Monserrat Alterantes", sans-serif;
+    font-weight: lighter;
+    padding: 2%;
+    border: grey;
+    border-radius: 10px;
+    border-width: thin;
+
+        h3 {
+            color: cornflowerblue;
+            margin-top: 0%;
+            font-weight: bold;
+            font-size: smaller;
+        }
+}
+
+.whatsappFloat{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.wa-float{
+	margin-top:16px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 15%;
+  color: #fff;
+  text-align: center;
+  opacity: 0.5;
+}
+
+.breadcrumb {
+    justify-content:center;
+    background-color: transparent ;
+}

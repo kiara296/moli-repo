@@ -1,3 +1,5 @@
+/* variables */
+/* mixins */
 /*HEADER*/
 /*header grid*/
 .header {
@@ -346,7 +348,7 @@ h4 {
 p {
   color: black;
   font-family: "Monserrat Alterantes", sans-serif;
-  letter-spacing: 1px; }
+  letter-spacing: 2px -1; }
 
 /*imagenes*/
 img {
@@ -358,7 +360,7 @@ a {
   text-decoration: none;
   color: black;
   font-family: "Monserrat Alterantes", sans-serif;
-  letter-spacing: 1px; }
+  letter-spacing: 2px -1; }
 
 /*Lista OL*/
 ol {

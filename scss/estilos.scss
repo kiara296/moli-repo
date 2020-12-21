@@ -1,7 +1,29 @@
+/* variables */
 $colorTurquesa:#c0dcfa;
 $colorGrisFondo:rgb(241, 238, 238);
 $fontSecundaria:'Montserrat', sans-serif;
 $fontPrincipal:'B612', sans-serif;
+$espacioLetras: 2px;
+$colorTitulos: true;
+
+/* mixins */
+@mixin menu-ppal {
+    grid-area: menuppal;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2vh 0vh 2vh 0vh;
+}
+
+@mixin productos-destacados {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    background-color: $colorGrisFondo;
+    padding: 6% 0% 6% 0%;
+    
+}
+
 @import "header";
 @import "footer"; 
 @import "index";
@@ -16,7 +38,7 @@ h1 {
     font-family: 'B612', sans-serif;
     margin: 0%;
     color: rgb(250, 98, 98);
-    letter-spacing: 5px;
+    letter-spacing: ($espacioLetras*2)+1;
 
         @media screen and (max-width: 600px) {
                 font-size: smaller;
@@ -27,7 +49,7 @@ h1 {
 h2 {
     color: black;
     text-align: center;
-    letter-spacing: 3px;
+    letter-spacing: $espacioLetras+1;
     font-family: "Alata", sans-serif;
     margin: 0px 0px 1% 0px;
 }
@@ -36,7 +58,7 @@ h3 {
     color: black;
     font-family: "Monserrat Alterantes", sans-serif;
     font-weight: lighter;
-    letter-spacing: 2px ;
+    letter-spacing: $espacioLetras;
     text-align: center;
     margin-bottom: 5%;
 }
@@ -44,13 +66,13 @@ h3 {
 h4 {
     color: black;
     font-family: "Monserrat Alterantes", sans-serif;
-    letter-spacing: 2px;
+    letter-spacing: $espacioLetras;
 }
 
 p {
     color: black;
     font-family: "Monserrat Alterantes", sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: $espacioLetras -1;
 }
     
         /*imagenes*/
@@ -63,7 +85,7 @@ a {
     text-decoration: none;
     color: black;
     font-family: "Monserrat Alterantes", sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: $espacioLetras -1;
 }
 
 /*Lista OL*/

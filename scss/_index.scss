@@ -3,15 +3,11 @@
     /*MENU PPAL*/
 
 .menuppal {
-    grid-area: menuppal;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 2vh 0vh 2vh 0vh;
+    @include menu-ppal
 
         a {
             font-family: 'Montserrat', sans-serif;
-            letter-spacing: 2px;
+            letter-spacing: $espacioLetras;
             font-weight: normal;
             /*hover negrita para menu*/
                 &:hover {
@@ -69,11 +65,7 @@
         /*Productos destacados*/
     
 .productosDestacados {
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-    background-color: $colorGrisFondo;
-    padding: 6% 0% 6% 0%;
+  @include productos-destacados
 
         article {
             display: flex;

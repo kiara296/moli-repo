@@ -17,8 +17,8 @@
   @media screen and (max-width: 600px) {
     .header {
       display: grid;
-      grid-template-areas: "alert alert alert" "logo buscar navbar";
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "alert alert alert" "logo navbar buscar";
+      grid-template-columns: 1fr 1fr 0.5fr;
       grid-template-rows: 5vh 10vh;
       grid-column-gap: 5px;
       grid-row-gap: 5px;
@@ -43,6 +43,10 @@
     padding-right: 5vh; }
     .alert-primary li:last-child {
       border-right: none; }
+    @media screen and (max-width: 600px) {
+      .alert-primary li {
+        padding-left: 2vh;
+        padding-right: 2vh; } }
   .alert-primary a {
     font-size: small;
     color: white; }
@@ -50,13 +54,18 @@
       .alert-primary a {
         font-size: x-small; } }
 
+@media screen and (max-width: 600px) {
+  .alert {
+    margin-bottom: 0%; } }
+
 /*ENCABEZADO*/
 /* centro */
 .header__logo {
   justify-self: center;
   align-self: center;
   grid-area: logo;
-  text-align: center; }
+  text-align: center;
+  padding: 0.5em; }
   .header__logo h2 {
     font-family: 'B612', sans-serif;
     font-style: italic;
@@ -78,7 +87,7 @@
   margin-right: 5%; }
   @media screen and (max-width: 600px) {
     .header__encabezadoDerecha {
-      margin-right: 0%; } }
+      padding: 5%; } }
 
 /* search input */
 .input-group-append, .input-group-prepend {
@@ -86,9 +95,20 @@
 
 .input-group {
   margin-right: 10%; }
+  @media screen and (max-width: 600px) {
+    .input-group {
+      flex-wrap: nowrap;
+      margin-right: 0%; } }
+
+@media screen and (max-width: 600px) {
+  .header__searchBar {
+    visibility: hidden; } }
 
 .fa-search {
   color: #a0b0cc; }
+  @media screen and (max-width: 600px) {
+    .fa-search {
+      visibility: visible; } }
 
 .btn-outline-secondary {
   border-color: #a0b0cc; }
@@ -106,6 +126,10 @@
     border: none; }
     .header__carrito img:hover {
       animation: swing 2s; }
+    @media screen and (max-width: 600px) {
+      .header__carrito img {
+        width: 16px;
+        height: 16px; } }
 
 .header__navbar {
   grid-area: navbar;
@@ -117,7 +141,7 @@
   margin: 0px; }
   @media screen and (max-width: 600px) {
     .header__navbar {
-      padding: 0%; } }
+      padding: 0.5em; } }
   .header__navbar ul {
     display: flex;
     justify-content: space-between;
@@ -129,8 +153,10 @@
     @media screen and (max-width: 600px) {
       .header__navbar ul {
         height: fit-content;
-        padding: 0px;
-        width: fit-content; } }
+        padding: 12px 14px;
+        width: fit-content;
+        margin-top: 0%;
+        margin-bottom: 0%; } }
   .header__navbar li a {
     display: flex;
     justify-content: space-between;
@@ -138,7 +164,7 @@
     @media screen and (max-width: 600px) {
       .header__navbar li a {
         font-size: xx-small;
-        padding: 0%; } }
+        padding: .4em 0.5em; } }
   .header__navbar a {
     height: 4vh;
     font-size: smaller;
@@ -176,10 +202,18 @@ footer {
   footer hr {
     width: 60px;
     background-color: cornflowerblue; }
+  footer button {
+    border: none;
+    margin-bottom: 0.5em; }
 
 .footer-copyright {
   background-color: #d4d1d1;
   font-size: small; }
+
+.fa-angle-right {
+  animation: none; }
+  .fa-angle-right:hover {
+    transform: rotate(90deg); }
 
 /*INDEX*/
 /*MENU PPAL*/

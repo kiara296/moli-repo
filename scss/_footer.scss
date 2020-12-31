@@ -11,9 +11,20 @@ footer {
             width: 60px; 
             background-color: cornflowerblue;
         }
+        button {
+            border: none;
+            margin-bottom: 0.5em;
+        }
 }
 
 .footer-copyright {
     background-color:rgb(212, 209, 209);
     font-size: small;
+}
+
+.fa-angle-right {
+    animation: none;
+    &:hover {
+    transform: rotate(90deg);
+    }
 }

@@ -20,8 +20,8 @@
             display: grid;
             grid-template-areas: 
             "alert alert alert"
-            "logo buscar navbar";
-            grid-template-columns: 1fr 1fr 1fr;
+            "logo navbar buscar";
+            grid-template-columns: 1fr 1fr 0.5fr;
             grid-template-rows: 5vh 10vh;
             grid-column-gap: 5px;
             grid-row-gap: 5px;
@@ -53,6 +53,10 @@
             &:last-child {
                 border-right: none; 
             }
+            @media screen and (max-width: 600px) {
+                padding-left: 2vh;
+                padding-right: 2vh;
+            }
         }
         a {
             font-size: small;   
@@ -65,7 +69,11 @@
         }
 }
 
-
+.alert {
+    @media screen and (max-width: 600px) {
+        margin-bottom: 0% ;
+    }
+}
 
  /*ENCABEZADO*/
     /* centro */
@@ -74,6 +82,7 @@
     align-self: center;
     grid-area: logo;
     text-align: center;
+    padding: 0.5em;
 
     h2 {
         font-family: 'B612', sans-serif;
@@ -106,8 +115,8 @@
     margin-right: 5%;
 
     @media screen and (max-width: 600px) {
-            margin-right: 0%;
-    }
+            padding: 5%;
+    } 
 }
 
 
@@ -119,11 +128,26 @@
 
 .input-group {
     margin-right: 10%;
+    @media screen and (max-width: 600px) {
+        flex-wrap: nowrap;
+        margin-right: 0%;
+    }
+}
+
+
+.header__searchBar {
+    @media screen and (max-width: 600px) {
+        visibility: hidden;;
+    }
 }
 
 .fa-search {
     color: rgb(160, 176, 204);
+    @media screen and (max-width: 600px) {
+        visibility: visible;;
+    }
 }
+
 
 .btn-outline-secondary {
     border-color: rgb(160, 176, 204);
@@ -147,6 +171,11 @@
             &:hover {
                 animation: swing 2s;
             }
+        @media screen and (max-width: 600px){
+            width: 16px;
+            height: 16px; 
+        }
+            
     }
 }
 
@@ -160,7 +189,7 @@
     margin: 0px;
 
     @media screen and (max-width: 600px) {
-          padding: 0%;
+          padding: 0.5em;
     }
 
         ul {
@@ -174,8 +203,10 @@
 
             @media screen and (max-width: 600px) {
                 height: fit-content;
-                padding: 0px;
+                padding: 12px 14px ;
                 width: fit-content;
+                margin-top: 0% ;
+                margin-bottom: 0%;
             }
         }
 
@@ -187,7 +218,7 @@
 
                 @media screen and (max-width: 600px) {
                     font-size: xx-small;
-                    padding: 0%;
+                    padding: .4em 0.5em;
                 }
             }     
         }
@@ -225,11 +256,3 @@
                 }
         }    
 } 
-
-
-
-
-
-
-
-

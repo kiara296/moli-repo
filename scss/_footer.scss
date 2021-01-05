@@ -1,10 +1,12 @@
 /*FOOTER*/
+/* redes */
 .seguinos {
     background-color:$colorTurquesa;
     border-color: #b8daff;
     margin-top: 5%;
 } 
 
+/* general footer */
 footer {
     background-color: $colorGrisFondo;
         hr {
@@ -16,14 +18,16 @@ footer {
             margin-bottom: 0.5em;
         }
 }
-
+/* copyright */
 .footer-copyright {
     background-color:rgb(212, 209, 209);
     font-size: small;
 }
 
+/* icono collapse */
 .fa-angle-right {
     animation: none;
+    /*  hover rotar icono */
     &:hover {
     transform: rotate(90deg);
     }

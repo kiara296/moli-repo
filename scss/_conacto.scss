@@ -9,10 +9,12 @@
     }
 }
 
+/* titulo conacto margenes */
 .tituloConacto {
     margin: 50px 0px 50px 0px;
 }
 
+/* formulario conacto  */
 .formulario-contacto {
     width: 30%;
     div {
@@ -29,6 +31,7 @@
 
 }
 
+/* informacion de conacto */
 .info-conacto {
     align-self: center;
     @media screen and (max-width: 600px) {

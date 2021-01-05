@@ -1,5 +1,6 @@
 /* variables */
 /* mixins */
+/* IMPORT */
 /*HEADER*/
 /*header grid*/
 .header {
@@ -13,7 +14,8 @@
   position: sticky;
   top: 0px;
   background-color: white;
-  z-index: 1; }
+  z-index: 1;
+  /* grid responsive  */ }
   @media screen and (max-width: 600px) {
     .header {
       display: grid;
@@ -123,7 +125,8 @@
   .header__carrito img {
     width: 30px;
     height: 30px;
-    border: none; }
+    border: none;
+    /* hover swing imagen carrito */ }
     .header__carrito img:hover {
       animation: swing 2s; }
     @media screen and (max-width: 600px) {
@@ -131,6 +134,7 @@
         width: 16px;
         height: 16px; } }
 
+/* MENU NAVBAR */
 .header__navbar {
   grid-area: navbar;
   display: flex;
@@ -192,11 +196,13 @@
         left: 0; }
 
 /*FOOTER*/
+/* redes */
 .seguinos {
   background-color: #c0dcfa;
   border-color: #b8daff;
   margin-top: 5%; }
 
+/* general footer */
 footer {
   background-color: #f1eeee; }
   footer hr {
@@ -206,12 +212,15 @@ footer {
     border: none;
     margin-bottom: 0.5em; }
 
+/* copyright */
 .footer-copyright {
   background-color: #d4d1d1;
   font-size: small; }
 
+/* icono collapse */
 .fa-angle-right {
-  animation: none; }
+  animation: none;
+  /*  hover rotar icono */ }
   .fa-angle-right:hover {
     transform: rotate(90deg); }
 
@@ -306,7 +315,10 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5%; }
+  margin-top: 5%;
+  /* titulos */
+  /* formulario */
+  /* parrafo */ }
   .crearCuenta h2 {
     margin-bottom: 2%; }
   .crearCuenta form {
@@ -324,9 +336,11 @@ footer {
     .contacto {
       display: block; } }
 
+/* titulo conacto margenes */
 .tituloConacto {
   margin: 50px 0px 50px 0px; }
 
+/* formulario conacto  */
 .formulario-contacto {
   width: 30%; }
   .formulario-contacto div {
@@ -339,6 +353,7 @@ footer {
       margin: 5%;
       padding: 5%; } }
 
+/* informacion de conacto */
 .info-conacto {
   align-self: center; }
   @media screen and (max-width: 600px) {
@@ -351,7 +366,8 @@ footer {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: baseline;
-  column-gap: 10px; }
+  column-gap: 10px;
+  /* imagen productos */ }
   .miCarrito img {
     width: 25%;
     height: 20%; }
@@ -360,15 +376,19 @@ footer {
         width: 50px;
         height: 44px; } }
 
+/* formulario carrito padding  */
 .form-carrito {
-  padding: 5%; }
+  padding: 5%;
+  /* margen responsive */ }
   @media screen and (max-width: 600px) {
     .form-carrito {
       margin: 2%; } }
 
+/* titulo carrito */
 .titulo-miCarrito {
   margin: 5% 0% 2% 0%; }
 
+/* ajustes tabla responsive */
 @media screen and (max-width: 600px) {
   table {
     margin: 2%; }
@@ -448,6 +468,7 @@ form {
     font-weight: bold;
     font-size: smaller; }
 
+/* WHATS APP ICONO FLOAT */
 .whatsappFloat {
   position: fixed;
   width: 60px;
@@ -465,6 +486,7 @@ form {
 .wa-float {
   margin-top: 16px; }
 
+/* CAROUSEL */
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
@@ -484,6 +506,7 @@ form {
   text-align: center;
   opacity: 0.5; }
 
+/* BREADCRUMB */
 .breadcrumb {
   justify-content: center;
   background-color: transparent; }

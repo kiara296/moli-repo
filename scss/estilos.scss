@@ -24,6 +24,8 @@ $colorTitulos: true;
     
 }
 
+/* IMPORT */
+
 @import "header";
 @import "footer"; 
 @import "index";
@@ -115,6 +117,8 @@ form {
         }
 }
 
+/* WHATS APP ICONO FLOAT */
+
 .whatsappFloat{
 	position:fixed;
 	width:60px;
@@ -134,6 +138,7 @@ form {
 	margin-top:16px;
 }
 
+/* CAROUSEL */
 .carousel-control-prev,
 .carousel-control-next {
   position: absolute;
@@ -154,6 +159,7 @@ form {
   opacity: 0.5;
 }
 
+/* BREADCRUMB */
 .breadcrumb {
     justify-content:center;
     background-color: transparent ;

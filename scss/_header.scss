@@ -15,7 +15,7 @@
     top: 0px;
     background-color: white;
     z-index: 1;
-
+        /* grid responsive  */
         @media screen and (max-width: 600px) {
             display: grid;
             grid-template-areas: 
@@ -167,7 +167,7 @@
         width: 30px;
         height: 30px;
         border: none;
-
+        /* hover swing imagen carrito */
             &:hover {
                 animation: swing 2s;
             }
@@ -179,6 +179,7 @@
     }
 }
 
+/* MENU NAVBAR */
 .header__navbar {
     grid-area: navbar;
     display: flex;

@@ -6,15 +6,35 @@
     align-items: baseline;
     column-gap: 10px;
         img {
-            width:50%;
+            width:25%;
             height: 20%;
+            @media screen and (max-width: 600px){
+                width: 50px;
+                height: 44px;
+            }
         }
 }
 
 .form-carrito {
     padding: 5%;
+    @media screen and (max-width: 600px) {
+        margin: 2%;
+    }
 }
 
 .titulo-miCarrito {
     margin: 5% 0% 2% 0%;
+}
+
+table {
+    @media screen and (max-width: 600px){
+        margin: 2%;
+        td {
+            font-size: x-small;
+        }
+        th {
+            font-size: x-small;
+        }
+    }
+    
 }

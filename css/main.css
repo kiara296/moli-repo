@@ -309,6 +309,10 @@ footer {
   margin-top: 5%; }
   .crearCuenta h2 {
     margin-bottom: 2%; }
+  .crearCuenta form {
+    justify-content: center; }
+  .crearCuenta p {
+    text-align: center; }
 
 /*CONTACTO*/
 .contacto {
@@ -316,6 +320,9 @@ footer {
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 60px; }
+  @media screen and (max-width: 600px) {
+    .contacto {
+      display: block; } }
 
 .tituloConacto {
   margin: 50px 0px 50px 0px; }
@@ -326,9 +333,17 @@ footer {
     width: 90%; }
   .formulario-contacto legend {
     text-align: center; }
+  @media screen and (max-width: 600px) {
+    .formulario-contacto {
+      width: 90%;
+      margin: 5%;
+      padding: 5%; } }
 
 .info-conacto {
   align-self: center; }
+  @media screen and (max-width: 600px) {
+    .info-conacto {
+      margin: 5%; } }
 
 /*CARRITO*/
 .miCarrito {
@@ -338,14 +353,29 @@ footer {
   align-items: baseline;
   column-gap: 10px; }
   .miCarrito img {
-    width: 50%;
+    width: 25%;
     height: 20%; }
+    @media screen and (max-width: 600px) {
+      .miCarrito img {
+        width: 50px;
+        height: 44px; } }
 
 .form-carrito {
   padding: 5%; }
+  @media screen and (max-width: 600px) {
+    .form-carrito {
+      margin: 2%; } }
 
 .titulo-miCarrito {
   margin: 5% 0% 2% 0%; }
+
+@media screen and (max-width: 600px) {
+  table {
+    margin: 2%; }
+    table td {
+      font-size: x-small; }
+    table th {
+      font-size: x-small; } }
 
 /*GENERALES*/
 /* H1 */

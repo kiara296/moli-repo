@@ -4,6 +4,9 @@
     flex-direction: row;
     justify-content: space-around;
     margin-bottom: 60px;
+    @media screen and (max-width: 600px){
+        display: block;
+    }
 }
 
 .tituloConacto {
@@ -18,8 +21,18 @@
     legend {
         text-align: center;
     }
+    @media screen and (max-width: 600px){
+        width: 90%;
+        margin: 5%;
+        padding:5%;
+    }
+
 }
 
 .info-conacto {
     align-self: center;
+    @media screen and (max-width: 600px) {
+        margin: 5%;
+    }
+
 }
